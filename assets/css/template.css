@@ -1,0 +1,543 @@
+* {
+    margin:0; 
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    height: 120px;
+}
+.container {/*foi usado no container da geral tambem, como erdado.*/
+    display: flex; /* transformando o container em flex*/
+    justify-content: space-between;   /* para colocar um conteudo de cada lado*/
+    width: 990px;
+}
+.logo {
+   display: flex;
+    align-items: center;
+}
+.menu {
+    display: flex;    /*para centralizar os links do meu nav*/
+    align-items: center;
+}
+nav ul,
+nav li {
+    list-style: none;   /*para retirar os links*/
+    margin: 0;
+    padding: 0;
+}
+nav ul {
+    display: flex;
+}
+
+nav a {
+    display: block;  /*para podermos alterar os tamanhos*/
+    padding: 15px;
+    text-decoration: none;  /*para retirar o sublinhado*/
+    text-transform: uppercase;  /*transforma as letras em maiusculas*/
+    color: #727272;
+}
+nav .active a,
+nav a:hover {
+    background-color: #39aae1;
+    color: #fff;
+}
+
+
+
+#banner {
+    display: flex;
+    justify-content: center;
+    background-image: url(../images/img1.jpg);
+    background-position: center;/*posicionando a imagem*/
+    background-size: cover;/*modifica o tamanho, cover=siginifica em munitores grandes a img vai espandir e em menores ela vai se adequar, ser reduzida.*/
+    height: auto;/*para conseguirmos ver a img temos que dar uma altura falsa para a img*/
+}
+.column {
+    flex-direction: column;/*o segimento que estiver nela segira como coluna, um a baixo do outro*/
+}
+.banner-haedline {
+    flex: 1;/*tamanho variavel, se adequa com o tamanho da tela.*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.banner-haedline h1 {
+    color: #fff;/*cor*/
+    font-size: 70px;/*tamanho*/
+    text-shadow: 0px 1px 0px #555;/*sombra*/
+    max-width: 350px;/*area fixa, quando for maior que 350px não podera se manter fixo.*/
+}
+.banner-haedline h2 {
+    color: #fff;/*cor*/
+    font-size: 21px;/*tamanho*/
+    text-shadow: 0px 1px 0px #555;/*sombra*/
+    max-width: 350px;/*area fixa, quando for maior que 350px não podera se manter fixo.*/
+    margin-top: 30px;
+}
+
+.banner-options {
+    height: 210px;/*tamanho fixo*/
+    display: flex;
+}
+.banner1,
+.banner2,
+.banner3 {
+    flex: 1;
+    color: #fff;
+    padding: 10px;
+}
+.banner1 {
+    background-color: #39aae1;
+}
+.banner2 {
+    background-color: #0079c7;
+}
+.banner3 {
+    background-color: #2b4c99;
+}
+.banner-title {
+    font-size: 21px;
+}
+.banner-desc {
+    font-size: 12px;
+    margin: 10px 0px 10px 0px;
+}
+.banner-options a {
+    display: inline-block;
+    border: 1px solid #fff;
+    padding: 5px;
+    color: #fff;
+    font-size: 12px;
+    text-decoration: none;
+}
+.banner-opening {
+    display: flex;
+    margin: 10px 0px 10px 0px;
+
+}
+.opening-day, 
+.opening-hours {
+    flex: 1;
+    font-size: 12px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 8px;
+}
+
+
+#geral {
+    display: flex;
+    justify-content: center;
+}
+.container {/*foi erdado*/
+   
+}
+#geral main {
+    flex: 2;
+}
+
+
+#geral aside {
+    flex: 1;
+}
+
+.departaments {
+    display: flex;
+    flex-direction: column;
+    width: 328px;
+    
+}
+.depart-img {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+}
+.depart-img img {
+    width: 150px;
+    height: 145px;
+    margin-bottom: 15px;
+}
+
+.Query {
+    display: flex;
+    flex-direction: column;
+
+}
+.Query p:first-child {
+    font-size: 12px;
+    color: #5c5c5c;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.query-phone {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.query-phone a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+
+
+.query-phone span {
+    flex: 1;
+}
+.fa-lg {
+    color: #5c5c5c;
+}
+.query-phone p {
+    flex: 6;
+}
+.query-phone p>strong {
+    padding-left: 30px;
+}
+
+
+
+
+
+
+.widget-title {
+    margin: 30px 0px 20px 0px;
+}
+.widget-title-text {
+    font-size: 21px;
+    color: #000;
+    font-weight: bold;
+}
+.widget-title-bar {
+    width: 50px;
+    height: 2px;
+    background-color: #36a9e1;
+    margin-top: 10px;
+}
+
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+article {
+    flex: 1;
+    min-width: 300px;
+    margin-right: 20px;
+}
+
+article a {
+    text-decoration: none;
+}
+
+article .news-data {
+    display: flex;
+}
+
+article .news-posted-at {
+    background-color: #2b4c99;
+    color: #fff;
+    font-size: 17px;
+    padding: 10px;
+    margin-right: 2px;
+}
+
+article .news-comments {
+    background-color: #2b4c99;
+    color: #fff;
+    font-size: 17px;
+    padding: 10px;
+}
+
+article .news-thumbnail {
+    margin-top: 30px;
+}
+article .news-thumbnail img {
+    width: 100%;
+    height: auto;
+}
+
+article .news-title {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: #000;
+    font-size: 23px;
+}
+
+article .news-resume {
+    color: #5c5c5c5c;
+    line-height: 20px;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+
+footer {
+    background-color: #1e1e1e;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-menu {
+    display: flex;
+    
+}
+.fm-1, .fm-2, .fm-3 {
+    flex: 1;
+    color: #fff;
+    
+}
+.fm-1 {
+    background-color: #39aae1;
+}
+.fm-2 {
+    background-color: #0079c7;
+}
+.fm-3 {
+    background-color: #2b4c99;
+}
+
+
+.footer-area {
+    display: flex;
+}
+.footer-areaitem {
+    flex: 1;
+    color: #fff;
+}
+.flexcolumn {
+    flex-direction: column;
+}
+
+footer .widget-title-text {
+    color: #fff;
+}
+
+.footer-copy {
+    border-top: 1px solid #2c2c2c;
+    height: 40px;
+    line-height: 40px;
+    color: #5c5c5c5c;
+    font-size: 12px;
+    margin-top: 30px;
+}
+
+.footer-menu a {
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: #fff;
+}
+
+.footer-menu h2 {
+    font-size: 20px;
+}
+.footer-menu p {
+    font-size: 11px;
+    padding-top: 10px;
+
+}
+
+.content-footer p {
+    display: inline-block;
+    font-size: 12px;
+    color: #5c5c5c;
+}
+
+.body-column {
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+}
+
+.address-content {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    justify-content: space-between;
+}
+
+.address-content li {
+    margin-top: 8px;
+    list-style: none;
+    color: #5c5c5c;
+}
+.address {
+    margin-top: 15px;
+    margin-right: 35px;
+}
+.Contact-number {
+    margin-top: 15px;
+    padding-top: 20px;
+}
+.Contact-number a {
+    padding-top: 8px;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.social-networks {
+    display: inline-block;
+}
+.social-networks a, ul {
+    text-decoration: none;
+    list-style: none;
+}
+.social-networks, li span {
+    font-size: 25px;
+    margin-top: 20px;
+    color: #5c5c5c;
+}
+
+
+
+
+
+.content-posts {
+    padding-right: 20px;
+}
+.content-posts h2::before {
+    content:"->";
+}
+
+.content-posts h2, .content-tweets h2 {
+    font-size: 12px;
+    margin-left: 5px;
+    margin-top: 20px;
+    color: #fff;
+}
+.content-posts p, .content-tweets p {
+    margin-left: 15px;
+    font-size: 10px;
+    color: #2b4c99;
+    padding-top: 10px;
+}
+
+
+
+
+
+.content-tweets h2::before {
+    content:"->";
+}
+
+.content-tweets h2 {
+    color: #5c5c5c;
+    font-size: 12px;
+    padding-right: 20px;
+}
+
+.menuMobile {
+    display: none;
+    width: 40px;
+    height: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 20px;
+}
+.mm-line {
+    height: 3px;
+    background-color: #39aae1;
+}
+
+
+
+
+/*Responsividade*/
+
+@media (max-width:768px) {
+    .logo img {
+        padding-left: 10px;
+    }
+    .menu {
+        padding-right: 10px;
+    }
+    .banner-haedline h1, .banner-haedline h2 {
+        padding-left: 10px;
+    }
+    .banner-haedline h1 {
+        font-size: 50px;
+    }
+    .banner-haedline h2 {
+        font-size: 18px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    
+}
+
+
+@media (max-width:680px) {
+    .container {
+        width: 100vw;
+    }
+    .logo, #banner, #geral, footer {
+        margin-left: 10px;
+    }
+    .banner-haedline h1 {
+        font-size: 60px;
+    }
+    .banner-haedline h2 {
+        font-size: 18px;
+    }
+}
+@media (max-width:667px) {
+    html, #banner, .banner-haedline {
+        width: 100vw;
+    }
+    .banner-haedline h1 {
+        font-size: 50px;
+        padding-left: 5px;
+    }
+    .banner-haedline h2 {
+        font-size: 15px;
+        padding-left: 5px;
+    } 
+    .banner-options {
+        height: auto;
+    }
+    .banner1, .banner2, .banner3 {
+        padding: ;
+    }
+    .banner-title {
+        font-size: 18px;
+    }
+    .banner-desc {
+        font-size: 10px;
+    }
+    .banner-options, .container, .footer-menu, 
+    .footer-area   {
+        flex-direction: column;
+        padding-left: 10px;
+    }
+
+
+header {
+    height: auto;
+}
+header .container {
+    flex-direction: row;
+}
+
+nav ul {
+    flex-direction: column;
+    display: none;
+}
+.menuMobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+}
